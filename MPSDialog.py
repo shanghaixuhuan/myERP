@@ -12,7 +12,7 @@ from StockDialog import StockDialog
 from ComposeDialog import ComposeDialog
 from ResultDialog import ResultDialog
 from PyQt5.Qt import Qt
-import queue
+import math
 import datetime
 
 class MPSDialog(QDialog):
@@ -289,14 +289,14 @@ class MPSDialog(QDialog):
             child = self.dic[i][0]
             num = self.dic[i][1]
             fdate = self.dic[i][2]
-            q = queue.Queue(100)
+            s = []
             for j in range(len(self.com)):
                 if(child == self.com[j][1]):
                     father = self.com[j][0]
-            q.put(["","",child,float(num),"",fdate,father])
-            while not(q.empty()):
-                x = q.get()
-                for j in range(len(self.com)):
+            s.append(["","",child,float(num),"",fdate,father])
+            while not(len(s) == 0):
+                x = s.pop()
+                for j in reversed(range(len(self.com))):
                     if(self.com[j][0] == x[6] and self.com[j][1] == x[2]):
                         x[0] = self.com[j][2]
                         x[1] = self.com[j][10]
@@ -324,9 +324,9 @@ class MPSDialog(QDialog):
                         x[4] = (datetime.datetime.strptime(x[5],'%Y-%m-%d') - datetime.timedelta(days = int(self.com[j][7])) \
                                - datetime.timedelta(days = int(self.com[j][8])) - datetime.timedelta(days = int(self.com[j][9]))).strftime('%Y-%m-%d')
                 self.r.append(x)
-                for j in range(len(self.com)):
+                for j in reversed(range(len(self.com))):
                     if(x[2] == self.com[j][0]):
-                        q.put(["","",self.com[j][1],x[3] * int(self.com[j][3]),
+                        s.append(["","",self.com[j][1],x[3] * int(self.com[j][3]),
                                "",x[4],self.com[j][0]])
         db.commit()
         db.close()
@@ -342,7 +342,7 @@ class MPSDialog(QDialog):
         query.exec_(sql)
         for i in range(len(self.r)):
             sql = "insert into MPSoutput values('%s','%s','%s','%s','%s','%s')"\
-                  %(self.r[i][0],self.r[i][1],self.r[i][2],str(round(self.r[i][3],1)),self.r[i][4],self.r[i][5])
+                  %(self.r[i][0],self.r[i][1],self.r[i][2],str(math.ceil(self.r[i][3])),self.r[i][4],self.r[i][5])
             query.exec_(sql)
         db.commit()
         db.close()
