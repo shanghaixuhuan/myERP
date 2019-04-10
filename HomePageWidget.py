@@ -6,6 +6,7 @@ from PyQt5.QtGui import QIcon,QPixmap,QFont
 from PyQt5.QtCore import QCoreApplication
 from AboutDialog import AboutDialog
 from MPSDialog import MPSDialog
+from CRMDialog import CRMDialog
 
 class HomePageWidget(QWidget):
     def __init__(self):
@@ -35,10 +36,20 @@ class HomePageWidget(QWidget):
         self.hmpsbox.addWidget(self.mpsbtn)
         self.hmpsbox.addStretch(1)
 
+        self.crmbtn = QPushButton(self)
+        self.crmbtn.setText("CRM商品推荐")
+        self.crmbtn.setFont(QFont("苏新诗柳楷繁", 15))
+        self.crmbtn.clicked.connect(self.crmdialog)
+        self.crmbtn.setFixedSize(160, 40)
+        self.hcrmbox = QHBoxLayout()
+        self.hcrmbox.addStretch(1)
+        self.hcrmbox.addWidget(self.crmbtn)
+        self.hcrmbox.addStretch(1)
+
         self.abtn = QPushButton(self)
         self.abtn.setText("关    于")
         self.abtn.setFont(QFont("苏新诗柳楷繁", 15))
-        self.abtn.clicked.connect(self.aboutdialog)
+        self.abtn.clicked.connect(self.crmdialog)
         self.abtn.setFixedSize(160, 40)
         self.habox = QHBoxLayout()
         self.habox.addStretch(1)
@@ -62,6 +73,8 @@ class HomePageWidget(QWidget):
         self.vbox.addStretch(1)
         self.vbox.addLayout(self.hmpsbox)
         self.vbox.addStretch(1)
+        self.vbox.addLayout(self.hcrmbox)
+        self.vbox.addStretch(1)
         self.vbox.addLayout(self.habox)
         self.vbox.addStretch(1)
         self.vbox.addLayout(self.hqbox)
@@ -77,6 +90,11 @@ class HomePageWidget(QWidget):
         mpsdialogWindow = MPSDialog()
         mpsdialogWindow.show()
         mpsdialogWindow.exec_()
+
+    def crmdialog(self):
+        crmdialogWindow = CRMDialog()
+        crmdialogWindow.show()
+        crmdialogWindow.exec_()
 
 
 if __name__ == '__main__':
