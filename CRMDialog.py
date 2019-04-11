@@ -5,6 +5,7 @@ from PyQt5.QtWidgets import (QWidget, QApplication, QVBoxLayout, QHBoxLayout,
 from PyQt5.QtGui import QIcon, QFont
 from PyQt5.QtCore import Qt
 from PyQt5.QtSql import QSqlDatabase, QSqlQueryModel
+from DetailDialog import GoodDetailDialog
 import qdarkstyle
 
 
@@ -32,6 +33,7 @@ class CRMDialog(QDialog):
         self.detailButton.setFont(QFont("苏新诗柳楷繁", 15))
         self.detailButton.setFixedHeight(40)
         self.detailButton.setFixedWidth(160)
+        self.detailButton.clicked.connect(self.detailInfo)
         self.v1box.addWidget(self.inputButton)
         self.v1box.addWidget(self.detailButton)
 
@@ -250,6 +252,20 @@ class CRMDialog(QDialog):
         self.pageEdit.setText(str(self.currentPage))
         self.recordQuery(index)
         return
+
+    def detailInfo(self):
+        index_ = self.tableView.currentIndex().row()
+        if (index_ == -1):
+            print(QMessageBox.warning(self, "警告", "您没有选中任何商品", QMessageBox.Yes, QMessageBox.Yes))
+            return
+        else:
+            str = self.queryModel.data(self.queryModel.index(index_,0))
+            self.goodDetail(str)
+
+    def goodDetail(self,GoodId):
+         gooddetaildialog = GoodDetailDialog(GoodId)
+         gooddetaildialog.show()
+         gooddetaildialog.exec_()
 
 
 if __name__ == '__main__':
