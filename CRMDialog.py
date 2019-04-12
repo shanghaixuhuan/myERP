@@ -6,6 +6,7 @@ from PyQt5.QtGui import QIcon, QFont
 from PyQt5.QtCore import Qt
 from PyQt5.QtSql import QSqlDatabase, QSqlQueryModel
 from DetailDialog import GoodDetailDialog
+from LeadDialog import LeadDialog
 import qdarkstyle
 
 
@@ -29,6 +30,7 @@ class CRMDialog(QDialog):
         self.inputButton.setFont(QFont("苏新诗柳楷繁", 15))
         self.inputButton.setFixedHeight(40)
         self.inputButton.setFixedWidth(160)
+        self.inputButton.clicked.connect(self.leadDialog)
         self.detailButton = QPushButton("查看详细信息")
         self.detailButton.setFont(QFont("苏新诗柳楷繁", 15))
         self.detailButton.setFixedHeight(40)
@@ -266,6 +268,11 @@ class CRMDialog(QDialog):
          gooddetaildialog = GoodDetailDialog(GoodId)
          gooddetaildialog.show()
          gooddetaildialog.exec_()
+
+    def leadDialog(self):
+        leaddialog = LeadDialog()
+        leaddialog.show()
+        leaddialog.exec_()
 
 
 if __name__ == '__main__':
