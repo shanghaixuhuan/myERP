@@ -53,7 +53,7 @@ class GoodDetailDialog(QDialog):
         self.idlabel_.setFont(QFont("苏新诗柳楷繁", 13))
         self.idlabel_.setText(id)
         self.pricelabel = QLabel()
-        self.pricelabel.setText('商品编号：')
+        self.pricelabel.setText('商品价格：')
         self.pricelabel.setFont(QFont("苏新诗柳楷繁", 13))
         self.pricelabel_ = QLabel()
         self.pricelabel_.setFont(QFont("苏新诗柳楷繁", 13))
@@ -182,6 +182,6 @@ class GoodDetailDialog(QDialog):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
-    gooddetaildialogWindow = GoodDetailDialog("1")
+    gooddetaildialogWindow = GoodDetailDialog("01")
     gooddetaildialogWindow.show()
     sys.exit(app.exec_())
