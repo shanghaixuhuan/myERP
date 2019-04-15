@@ -4,6 +4,7 @@ from PyQt5.QtWidgets import (QDialog,QApplication,QVBoxLayout,QHBoxLayout,
                              QFileDialog,QMessageBox)
 import qdarkstyle
 from PyQt5.QtGui import QIcon,QFont
+from apriori import Apriori
 
 class LeadDialog(QDialog):
     def __init__(self):
@@ -128,6 +129,7 @@ class LeadDialog(QDialog):
                 f2.close()
                 self.displayRecord()
                 self.te.setText("")
+                self.calculateResult()
                 print(QMessageBox.information(self, "提示", "输入记录成功！", QMessageBox.Yes, QMessageBox.Yes))
             except Exception:
                 print(QMessageBox.warning(self, "警告", "你选择的文件路径有错！", QMessageBox.Yes, QMessageBox.Yes))
@@ -139,6 +141,7 @@ class LeadDialog(QDialog):
         self.displayRecord()
         self.pte.setPlainText("")
         self.displayRecord()
+        self.calculateResult()
         print(QMessageBox.information(self, "提示", "输入记录成功！", QMessageBox.Yes, QMessageBox.Yes))
 
     def clearText(self):
@@ -146,6 +149,12 @@ class LeadDialog(QDialog):
         f.write("")
         f.close()
         self.displayRecord()
+
+    def calculateResult(self):
+        f = []
+        dataSet = Apriori.loadData(f)
+        L, suppData = Apriori.apriori(dataSet)
+        t = Apriori.printData(L, suppData)
 
 
 if __name__ == '__main__':
