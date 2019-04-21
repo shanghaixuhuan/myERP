@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d59cba5a-9825-4ffb-86db-690c696e63f3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/apriori.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConfidenceCalculate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CRMDialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRMDialog.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DetailDialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/DetailDialog.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LeadDialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/LeadDialog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/record.DAT" beforeDir="false" afterPath="$PROJECT_DIR$/data/record.DAT" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/myERP.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/myERP.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apriori.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/result.DAT" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,34 +16,6 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="LeadDialog.py" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/LeadDialog.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="-1830">
-                    <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="apriori.py" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/apriori.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="393">
-                    <caret line="86" column="41" selection-start-line="86" selection-start-column="41" selection-end-line="86" selection-end-column="41" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="myERP" />
@@ -54,7 +25,7 @@
       <file leaf-file-name="BOMDialog.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BOMDialog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="855">
               <caret line="52" column="29" selection-start-line="47" selection-start-column="8" selection-end-line="52" selection-end-column="29" />
             </state>
           </provider>
@@ -75,7 +46,7 @@
       <file leaf-file-name="HomePageWidget.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HomePageWidget.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
+            <state relative-caret-position="171">
               <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -87,8 +58,8 @@
       <file leaf-file-name="CRMDialog.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CRMDialog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1300">
-              <caret line="294" column="35" selection-start-line="294" selection-start-column="35" selection-end-line="294" selection-end-column="35" />
+            <state relative-caret-position="177">
+              <caret line="246" column="48" lean-forward="true" selection-start-line="246" selection-start-column="48" selection-end-line="246" selection-end-column="48" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -96,11 +67,32 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="LeadDialog.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LeadDialog.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1900">
+              <caret line="105" column="32" selection-start-line="105" selection-start-column="32" selection-end-line="105" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConfidenceCalculate.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ConfidenceCalculate.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1045">
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="MPSDialog.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MPSDialog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="341" column="24" lean-forward="true" selection-start-line="341" selection-start-column="24" selection-end-line="341" selection-end-column="24" />
+            <state relative-caret-position="6194">
+              <caret line="341" column="24" selection-start-line="341" selection-start-column="24" selection-end-line="341" selection-end-column="24" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -111,7 +103,7 @@
       <file leaf-file-name="ResultDialog.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ResultDialog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
+            <state relative-caret-position="38">
               <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -123,8 +115,8 @@
       <file leaf-file-name="DetailDialog.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DetailDialog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="204" column="46" lean-forward="true" selection-start-line="204" selection-start-column="46" selection-end-line="204" selection-end-column="46" />
+            <state relative-caret-position="4921">
+              <caret line="264" selection-start-line="264" selection-end-line="264" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -162,15 +154,16 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/LeadDialog.py" />
         <option value="$PROJECT_DIR$/DetailDialog.py" />
+        <option value="$PROJECT_DIR$/ConfidenceCalculate.py" />
         <option value="$PROJECT_DIR$/CRMDialog.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-184" />
-    <option name="y" value="101" />
-    <option name="width" value="1789" />
-    <option name="height" value="964" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="322" />
+    <option name="y" value="96" />
+    <option name="width" value="1470" />
+    <option name="height" value="974" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -226,6 +219,24 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="ConfidenceCalculate" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ERP" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ConfidenceCalculate.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="DetailDialog" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ERP" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -262,24 +273,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="apriori" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ERP" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apriori.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ERP" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -302,16 +295,16 @@
       <item itemvalue="Python.CRMDialog" />
       <item itemvalue="Python.DetailDialog" />
       <item itemvalue="Python.LeadDialog" />
-      <item itemvalue="Python.apriori" />
       <item itemvalue="Python.test" />
+      <item itemvalue="Python.ConfidenceCalculate" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.CRMDialog" />
+        <item itemvalue="Python.ConfidenceCalculate" />
         <item itemvalue="Python.DetailDialog" />
-        <item itemvalue="Python.test" />
         <item itemvalue="Python.LeadDialog" />
-        <item itemvalue="Python.apriori" />
+        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -338,19 +331,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-147" y="81" width="1431" height="771" extended-state="0" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.68927443" visible="true" weight="0.15483871" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.68330956" visible="true" weight="0.14200793" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32905984" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2767475" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32905984" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2791798" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Structure" order="1" sideWeight="0.31619537" side_tool="true" weight="0.18859649" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.38659057" />
-      <window_info id="Favorites" order="2" sideWeight="0.31072554" side_tool="true" visible="true" weight="0.15483871" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39432177" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.35948646" />
+      <window_info id="Favorites" order="2" sideWeight="0.31669044" side_tool="true" visible="true" weight="0.14200793" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -745,42 +737,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BOMDialog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="855">
           <caret line="52" column="29" selection-start-line="47" selection-start-column="8" selection-end-line="52" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HomePageWidget.py">
+    <entry file="file://$PROJECT_DIR$/ResultDialog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+        <state relative-caret-position="38">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeadDialog.py">
+    <entry file="file://$PROJECT_DIR$/apriori.py" />
+    <entry file="file://$PROJECT_DIR$/DetailDialog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1830">
-          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+        <state relative-caret-position="4921">
+          <caret line="264" selection-start-line="264" selection-end-line="264" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apriori.py">
+    <entry file="file://$PROJECT_DIR$/HomePageWidget.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="86" column="41" selection-start-line="86" selection-start-column="41" selection-end-line="86" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ResultDialog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="171">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -789,18 +775,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MPSDialog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="341" column="24" lean-forward="true" selection-start-line="341" selection-start-column="24" selection-end-line="341" selection-end-column="24" />
+        <state relative-caret-position="6194">
+          <caret line="341" column="24" selection-start-line="341" selection-start-column="24" selection-end-line="341" selection-end-column="24" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DetailDialog.py">
+    <entry file="file://$PROJECT_DIR$/ConfidenceCalculate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="204" column="46" lean-forward="true" selection-start-line="204" selection-start-column="46" selection-end-line="204" selection-end-column="46" />
+        <state relative-caret-position="1045">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeadDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1900">
+          <caret line="105" column="32" selection-start-line="105" selection-start-column="32" selection-end-line="105" selection-end-column="32" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -809,8 +802,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CRMDialog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1300">
-          <caret line="294" column="35" selection-start-line="294" selection-start-column="35" selection-end-line="294" selection-end-column="35" />
+        <state relative-caret-position="177">
+          <caret line="246" column="48" lean-forward="true" selection-start-line="246" selection-start-column="48" selection-end-line="246" selection-end-column="48" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

@@ -7,6 +7,7 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtSql import QSqlDatabase, QSqlQueryModel,QSqlQuery
 from DetailDialog import GoodDetailDialog
 from LeadDialog import LeadDialog
+from ConfidenceCalculate import ConfidenceCalculate
 import qdarkstyle
 
 
@@ -23,7 +24,6 @@ class CRMDialog(QDialog):
         self.totalRecord = 0
         self.pageRecord = 10
         self.initUI()
-        self.initData()
 
     def initUI(self):
         self.v1box = QVBoxLayout()
@@ -266,13 +266,11 @@ class CRMDialog(QDialog):
             self.goodDetail(str)
 
     def goodDetail(self,GoodId):
-        for i in range(len(self.data)):
-            if(GoodId == self.data[i][0]):
-                size = self.data[i][1]
-                str1 = self.data[i][2]
-                str2 = self.data[i][3]
-                str3 = self.data[i][4]
-        gooddetaildialog = GoodDetailDialog(GoodId,size,str1,str2,str3)
+        s = ConfidenceCalculate().readFile(self.totalRecord)
+        str1 = s[int(GoodId) - 1][0]
+        str2 = s[int(GoodId) - 1][1]
+        str3 = s[int(GoodId) - 1][2]
+        gooddetaildialog = GoodDetailDialog(GoodId,str1,str2,str3)
         gooddetaildialog.show()
         gooddetaildialog.exec_()
 
@@ -280,33 +278,6 @@ class CRMDialog(QDialog):
         leaddialog = LeadDialog()
         leaddialog.show()
         leaddialog.exec_()
-
-    def initData(self):
-        self.data = []
-        db = QSqlDatabase.addDatabase("QSQLITE")
-        db.setDatabaseName('./db/myERP.db')
-        db.open()
-        query = QSqlQuery()
-        sql = "select * from goods"
-        query.exec_(sql)
-        f = open('./result/result.DAT','r')
-        t = f.read().split('\n')
-        for i in range(len(t)):
-            t[i] = t[i].split(', ')
-        while (query.next()):
-            x = [query.value(0), 0, '', '', '']
-            for i in range(len(t)-1):
-                if (x[1] > 2):
-                    break;
-                for j in range(2):
-                    if (int(t[i][j]) == int(x[0])):
-                        x[1] = x[1] + 1
-                        x[x[1] + 1] = t[i][(j + 1) % 2]
-                        if(len(x[x[1] + 1]) == 1):
-                            x[x[1] + 1] = '0' + t[i][(j + 1) % 2]
-            self.data.append(x)
-        db.commit()
-        db.close()
 
 
 if __name__ == '__main__':

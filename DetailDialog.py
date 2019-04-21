@@ -7,10 +7,9 @@ from PyQt5.QtSql import QSqlQuery,QSqlDatabase
 
 
 class GoodDetailDialog(QDialog):
-    def __init__(self,GoodId,size,str1,str2,str3):
+    def __init__(self,GoodId,str1,str2,str3):
         super(GoodDetailDialog,self).__init__()
         self.good = GoodId
-        self.size = size
         self.str1 = str1
         self.str2 = str2
         self.str3 = str3
@@ -173,103 +172,100 @@ class GoodDetailDialog(QDialog):
         self.vbox.addLayout(self.htbox)
         self.vbox.addStretch(1)
 
-        if(self.size > 0):
-            self.youlabel = QLabel()
-            self.youlabel.setText('你可能还对以下商品感兴趣：')
-            self.youlabel.setFont(QFont("苏新诗柳楷繁", 13))
-            self.vbox.addWidget(self.youlabel)
-            self.vbox.addStretch(1)
+        self.youlabel = QLabel()
+        self.youlabel.setText('你可能还对以下商品感兴趣：')
+        self.youlabel.setFont(QFont("苏新诗柳楷繁", 13))
+        self.vbox.addWidget(self.youlabel)
+        self.vbox.addStretch(1)
 
-            self.hbbox = QHBoxLayout()
-            self.hbbox.addStretch(1)
+        self.hbbox = QHBoxLayout()
+        self.hbbox.addStretch(1)
 
-            self.db = QSqlDatabase.addDatabase("QSQLITE")
-            self.db.setDatabaseName('./db/myERP.db')
-            self.db.open()
-            self.query = QSqlQuery()
-            sql = "select * from goods where id = '%s'" % (self.str1)
-            self.query.exec_(sql)
-            self.query.next()
-            img1 = self.query.value(5)
-            name1 = self.query.value(1)
+        self.db = QSqlDatabase.addDatabase("QSQLITE")
+        self.db.setDatabaseName('./db/myERP.db')
+        self.db.open()
+        self.query = QSqlQuery()
+        sql = "select * from goods where id = '%s'" % (self.str1)
+        self.query.exec_(sql)
+        self.query.next()
+        img1 = self.query.value(5)
+        name1 = self.query.value(1)
 
-            self.labeltitle1 = QLabel(self)
-            self.imagetitle1 = QPixmap()
-            self.imagetitle1.load(img1)
-            self.labeltitle1.setFixedSize(200,150)
-            self.labeltitle1.setPixmap(self.imagetitle1.scaled(self.labeltitle1.width(), self.labeltitle1.height()))
+        self.labeltitle1 = QLabel(self)
+        self.imagetitle1 = QPixmap()
+        self.imagetitle1.load(img1)
+        self.labeltitle1.setFixedSize(200, 150)
+        self.labeltitle1.setPixmap(self.imagetitle1.scaled(self.labeltitle1.width(), self.labeltitle1.height()))
 
-            self.name1label = QLabel()
-            self.name1label.setText(name1)
-            self.name1label.setFont(QFont("苏新诗柳楷繁", 10))
-            self.name1label.setFixedWidth(200)
+        self.name1label = QLabel()
+        self.name1label.setText(name1)
+        self.name1label.setFont(QFont("苏新诗柳楷繁", 10))
+        self.name1label.setFixedWidth(200)
 
-            self.bbv1box = QVBoxLayout()
-            self.bbv1box.addWidget(self.labeltitle1)
-            self.bbv1box.addWidget(self.name1label)
+        self.bbv1box = QVBoxLayout()
+        self.bbv1box.addWidget(self.labeltitle1)
+        self.bbv1box.addWidget(self.name1label)
 
-            self.hbbox.addLayout(self.bbv1box)
-            self.hbbox.addStretch(1)
+        self.hbbox.addLayout(self.bbv1box)
+        self.hbbox.addStretch(1)
 
-            if(self.size > 1):
-                sql = "select * from goods where id = '%s'" % (self.str2)
-                self.query.exec_(sql)
-                self.query.next()
-                img2 = self.query.value(5)
-                name2 = self.query.value(1)
+        sql = "select * from goods where id = '%s'" % (self.str2)
+        self.query.exec_(sql)
+        self.query.next()
+        img2 = self.query.value(5)
+        name2 = self.query.value(1)
 
-                self.labeltitle2 = QLabel(self)
-                self.imagetitle2 = QPixmap()
-                self.imagetitle2.load(img2)
-                self.labeltitle2.setFixedSize(200, 150)
-                self.labeltitle2.setPixmap(self.imagetitle2.scaled(self.labeltitle2.width(), self.labeltitle2.height()))
+        self.labeltitle2 = QLabel(self)
+        self.imagetitle2 = QPixmap()
+        self.imagetitle2.load(img2)
+        self.labeltitle2.setFixedSize(200, 150)
+        self.labeltitle2.setPixmap(self.imagetitle2.scaled(self.labeltitle2.width(), self.labeltitle2.height()))
 
-                self.name2label = QLabel()
-                self.name2label.setText(name2)
-                self.name2label.setFont(QFont("苏新诗柳楷繁", 10))
-                self.name2label.setFixedWidth(200)
-                self.bbv2box = QVBoxLayout()
-                self.bbv2box.addWidget(self.labeltitle2)
-                self.bbv2box.addWidget(self.name2label)
+        self.name2label = QLabel()
+        self.name2label.setText(name2)
+        self.name2label.setFont(QFont("苏新诗柳楷繁", 10))
+        self.name2label.setFixedWidth(200)
+        self.bbv2box = QVBoxLayout()
+        self.bbv2box.addWidget(self.labeltitle2)
+        self.bbv2box.addWidget(self.name2label)
 
-                self.hbbox.addLayout(self.bbv2box)
-                self.hbbox.addStretch(1)
-                if(self.size > 2):
-                    sql = "select * from goods where id = '%s'" % (self.str3)
-                    self.query.exec_(sql)
-                    self.query.next()
-                    img3 = self.query.value(5)
-                    name3 = self.query.value(1)
+        self.hbbox.addLayout(self.bbv2box)
+        self.hbbox.addStretch(1)
 
-                    self.labeltitle3 = QLabel(self)
-                    self.imagetitle3 = QPixmap()
-                    self.imagetitle3.load(img3)
-                    self.labeltitle3.setFixedSize(200, 150)
-                    self.labeltitle3.setPixmap(
-                        self.imagetitle3.scaled(self.labeltitle3.width(), self.labeltitle3.height()))
+        sql = "select * from goods where id = '%s'" % (self.str3)
+        self.query.exec_(sql)
+        self.query.next()
+        img3 = self.query.value(5)
+        name3 = self.query.value(1)
 
-                    self.name3label = QLabel()
-                    self.name3label.setText(name3)
-                    self.name3label.setFont(QFont("苏新诗柳楷繁", 10))
-                    self.name3label.setFixedWidth(200)
+        self.labeltitle3 = QLabel(self)
+        self.imagetitle3 = QPixmap()
+        self.imagetitle3.load(img3)
+        self.labeltitle3.setFixedSize(200, 150)
+        self.labeltitle3.setPixmap(
+            self.imagetitle3.scaled(self.labeltitle3.width(), self.labeltitle3.height()))
 
-                    self.bbv3box = QVBoxLayout()
-                    self.bbv3box.addWidget(self.labeltitle3)
-                    self.bbv3box.addWidget(self.name3label)
+        self.name3label = QLabel()
+        self.name3label.setText(name3)
+        self.name3label.setFont(QFont("苏新诗柳楷繁", 10))
+        self.name3label.setFixedWidth(200)
 
-                    self.hbbox.addLayout(self.bbv3box)
-                    self.hbbox.addStretch(1)
+        self.bbv3box = QVBoxLayout()
+        self.bbv3box.addWidget(self.labeltitle3)
+        self.bbv3box.addWidget(self.name3label)
 
-            self.vbox.addLayout(self.hbbox)
-            self.vbox.addStretch(1)
+        self.hbbox.addLayout(self.bbv3box)
+        self.hbbox.addStretch(1)
+
+        self.vbox.addLayout(self.hbbox)
+        self.vbox.addStretch(1)
 
         self.setLayout(self.vbox)
-
 
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
-    gooddetaildialogWindow = GoodDetailDialog("01",3,'02','03','04')
+    gooddetaildialogWindow = GoodDetailDialog("01",'02','03','04')
     gooddetaildialogWindow.show()
     sys.exit(app.exec_())
