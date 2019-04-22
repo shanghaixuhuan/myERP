@@ -24,14 +24,20 @@ class ConfidenceCalculate():
                     j1 = '0' + str(j+1)
                 else:
                     j1 = str(j+1)
-                w = 0
+                w1 = 0
+                w2 = 0
                 for k in range(recordCount):
-                    if(self.verifyExist(i1,f1[k]) == True and self.verifyExist(j1,f1[k]) == True):
-                        w = w + 1
-                c = float(w)/recordCount
+                    if(self.verifyExist(i1,f1[k]) == True):
+                        w1 = w1 + 1
+                        if(self.verifyExist(j1,f1[k]) == True):
+                            w2 = w2 + 1
+                c = float(w2)/float(w1)
                 oc = [j1,c]
                 x.append(oc)
             y.append(x)
+
+        for i in range(len(y)):
+            print(y[i])
 
         s = []
         for i in range(len(y)):
@@ -52,10 +58,13 @@ class ConfidenceCalculate():
                 t.append(y[i][flag][0])
                 y[i][flag][1] = -1
             s.append(t)
+
+        for i in range(len(s)):
+            print(s[i])
+
         return s
 
 
 if __name__ == "__main__":
     cc = ConfidenceCalculate()
     s = cc.readFile(15)
-    print(s)
